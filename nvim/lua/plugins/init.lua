@@ -25,14 +25,6 @@ return {
     end
   },
 
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
-    opts = function()
-      return require "configs.null-ls"
-    end,
-  },
-
   -- rust
 
   {
@@ -75,6 +67,33 @@ return {
   },
 
   -- general
+   {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
+    ft = {"python", "javascript", "typescript", "javascriptreact", "typescriptreact", "json"},
+    opts = function()
+      return require "configs.null-ls"
+    end,
+  },
+
+  --[[
+  -- doesn't work :(, sticking to null-ls for now
+  {
+    "mhartington/formatter.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return require("configs.formatter")
+    end,
+  },
+  
+  {
+    "mfussenegger/nvim-lint",
+    event = "VeryLazy",
+    config = function ()
+        return require("configs.lint")
+    end,
+  },
+  ]]
   
   {
     "rcarriga/nvim-dap-ui",
@@ -114,6 +133,8 @@ return {
         "mypy",
         "ruff",
         "pyright",
+        "typescript-language-server",
+        "biome",
       },
     },
   },
@@ -127,6 +148,8 @@ return {
         "rust",
         "haskell",
         "python",
+        "javascript",
+        "typescript",
       },
     },
   },
