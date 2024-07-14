@@ -1,5 +1,5 @@
 # dotconfig-ministation
-.config folder from my Fedora Workstation penboot installation
+.config folder from my Fedora Workstation penboot installation, called `ministation`
 
 ## notes
 
