@@ -57,3 +57,5 @@ then create a file called `biome.json` in your project's root folder and use the
 	}
 }
 ```
+
+`none-ls` and the biome `lsp` should be working with any js/ts/jsx/tsx/json file
