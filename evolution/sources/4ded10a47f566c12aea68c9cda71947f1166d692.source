@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=baalateja.k@gmail.com
+Enabled=true
+Parent=94c61801b69040f8efbe5aac1992ebe87a930cfe
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=5f80df8f676054dfc96befb7435e38b83591fa7e
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://local/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=baalateja.k@gmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none

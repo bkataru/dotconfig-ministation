@@ -1,0 +1,33 @@
+require "nvchad.mappings"
+
+-- add yours here
+
+local map = vim.keymap.set
+
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
+
+-- breakpoints toggle
+map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>")
+
+-- python debugger
+map("n", "<leader>dpr", function ()
+  require('dap-python').test_method()
+end)
+
+-- rust debugger
+map("n", "<leader>dus", function ()
+  local widgets = require('dap.ui.widgets')
+  local sidebar = widgets.sidebar(widgets.scopes)
+  sidebar.open()
+end)
+
+-- rust crates
+map("n", "<leader>rcu", function ()
+  require('crates').upgrade_all_crates()
+end)
+
+
+
+
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

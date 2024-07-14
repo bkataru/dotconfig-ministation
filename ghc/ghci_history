@@ -1,0 +1,11 @@
+:q
+main
+:q
+ghci main.hs
+sum it
+take 10 (filter even [43..])
+6 + 3^2 * 4
+:q
+exit()
+exit
+2 * 3
