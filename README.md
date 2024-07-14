@@ -24,22 +24,18 @@ then create a file called `biome.json` in your project's root folder and use the
 		"formatWithErrors": true,
 		"indentStyle": "tab",
 		"indentWidth": 2,
-		"lineWidth": 120
+		"lineWidth": 140
 	},
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "single",
 			"jsxQuoteStyle": "single"
 		},
-		"globals": [
-			"__DEV__"
-		]
+		"globals": ["__DEV__"]
 	},
 	"linter": {
 		"enabled": true,
-		"ignore": [
-			"node_modules"
-		],
+		"ignore": ["node_modules"],
 		"rules": {
 			"all": true,
 			"complexity": {
@@ -52,6 +48,9 @@ then create a file called `biome.json` in your project's root folder and use the
 			},
 			"suspicious": {
 				"noExplicitAny": "off"
+			},
+			"nursery": {
+				"all": false
 			}
 		}
 	}
