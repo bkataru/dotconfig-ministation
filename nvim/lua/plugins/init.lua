@@ -1,5 +1,5 @@
 return {
-  
+
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
@@ -22,6 +22,20 @@ return {
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
       
       require("dap-python").setup(path)
+    end
+  },
+
+  -- js/ts/jsx/tsx
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+    },
+    config = function ()
+      require("nvim-ts-autotag").setup()
     end
   },
 
@@ -67,11 +81,23 @@ return {
   },
 
   -- general
+  --[[
+  -- replaced by none-ls.nvim 
    {
     "jose-elias-alvarez/null-ls.nvim",
     event = "VeryLazy",
     ft = {"python", "javascript", "typescript", "javascriptreact", "typescriptreact", "json"},
     opts = function()
+      return require "configs.null-ls"
+    end,
+  },
+  --]]
+
+  {
+    "nvimtools/none-ls.nvim",
+    event = "VeryLazy",
+    ft = {"python", "javascript", "typescript", "javascriptreact", "typescriptreact", "json"},
+    opts = function ()
       return require "configs.null-ls"
     end,
   },
@@ -86,7 +112,7 @@ return {
     end,
   },
   
-  {
+  
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
     config = function ()
@@ -131,27 +157,21 @@ return {
         "black",
         "debugpy",
         "mypy",
-        "ruff",
+        "pylint",
         "pyright",
+        "tailwindcss-language-server",
         "typescript-language-server",
         "biome",
       },
     },
   },
- 
+
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "markdown",
-        "markdown_inline",
-        "rust",
-        "haskell",
-        "python",
-        "javascript",
-        "typescript",
-      },
-    },
+    opts = function ()
+      local opts = require("configs.treesitter")
+      return opts
+    end,
   },
 
   {

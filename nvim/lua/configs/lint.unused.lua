@@ -1,7 +1,7 @@
 require('lint').linters_by_ft = {
   javascript = {'biome'},
   typescript = {'biome'},
-  python = {'mypy', 'ruff'},
+  python = {'mypy', 'pylint', 'ruff'},
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost "}, {

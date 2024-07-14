@@ -17,13 +17,6 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- typescript
-lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-}
-
 -- haskell 
 lspconfig.hls.setup {
   on_attach = on_attach,
@@ -38,6 +31,13 @@ lspconfig.pyright.setup {
   on_init = on_init,
   capabilities = capabilities,
   filetypes = {"python"},
+}
+
+-- tailwindcss
+lspconfig.tailwindcss.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
 }
 
 -- javascript/typescript

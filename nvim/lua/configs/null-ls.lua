@@ -5,10 +5,11 @@ local opts = {
   sources = {
     null_ls.builtins.formatting.black,
     null_ls.builtins.diagnostics.mypy,
-    null_ls.builtins.diagnostics.ruff,
-    null_ls.builtins.formatting.rome.with({
-      command = "biome",
-    }),
+    null_ls.builtins.diagnostics.pylint,
+
+    -- ruff is not working in none-ls atm :(
+    -- null_ls.builtins.diagnostics.ruff,
+    null_ls.builtins.formatting.biome,
   },
   on_attach = function (client, bufnr)
     if client.supports_method("textDocument/formatting") then
