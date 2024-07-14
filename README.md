@@ -3,7 +3,7 @@
 
 ## notes
 
-### configuring `biome` for `js/ts/jsx/tsx/json` formatting
+### configuring `neovim` to use `biome` for `js/ts/jsx/tsx/json` formatting
 
 first install `biome` locally in your project via
 
@@ -57,4 +57,4 @@ then create a file called `biome.json` in your project's root folder and use the
 }
 ```
 
-`none-ls` and the biome `lsp` should be working with any js/ts/jsx/tsx/json file
+`none-ls` and the biome `lsp` should now be working with any js/ts/jsx/tsx/json file while using neovim
