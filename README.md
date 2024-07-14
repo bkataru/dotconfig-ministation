@@ -23,7 +23,7 @@ then create a file called `biome.json` in your project's root folder and use the
 		"enabled": true,
 		"formatWithErrors": true,
 		"indentStyle": "tab",
-		"indentSize": 4,
+		"indentWidth": 2,
 		"lineWidth": 120
 	},
 	"javascript": {
@@ -52,9 +52,6 @@ then create a file called `biome.json` in your project's root folder and use the
 			},
 			"suspicious": {
 				"noExplicitAny": "off"
-			},
-			"nursery": {
-				"noSelfAssign": "error"
 			}
 		}
 	}
