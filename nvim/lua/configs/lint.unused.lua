@@ -1,6 +1,6 @@
 require('lint').linters_by_ft = {
-  javascript = {'biome'},
-  typescript = {'biome'},
+  javascript = {'eslint', 'biome'},
+  typescript = {'eslint', 'biome'},
   python = {'mypy', 'pylint', 'ruff'},
 }
 

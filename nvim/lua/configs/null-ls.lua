@@ -9,6 +9,10 @@ local opts = {
 
     -- ruff is not working in none-ls atm :(
     -- null_ls.builtins.diagnostics.ruff,
+    
+    null_ls.builtins.formatting.prettierd,
+
+    --[[
     null_ls.builtins.formatting.biome.with({
       args = {
 				'check',
@@ -19,6 +23,7 @@ local opts = {
 				'$FILENAME',
 			},
     }),
+    --]]
   },
   on_attach = function (client, bufnr)
     if client.supports_method("textDocument/formatting") then

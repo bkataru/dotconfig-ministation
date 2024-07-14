@@ -70,8 +70,16 @@ lspconfig.tsserver.setup {
   }
 }
 
+lspconfig.eslint.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+}
+
+--[[
 lspconfig.biome.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
 }
+]]
