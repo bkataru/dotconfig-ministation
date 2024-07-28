@@ -379,3 +379,43 @@ go list -e std
 go list -m all
 go doc -all
 find /root/go -name *.go
+clear
+pass
+clear
+pass git log
+ls
+ls -a
+pass git remote add origin https://github.com/bkataru/pwd-store-ministation.git
+pass git push origin main
+cd ~
+ls
+cd -a
+ls -a
+cd .password-store/
+ls
+ls -a
+cd ~/.config/nvim
+clear
+ls
+clear
+pass show api/tokens/openai
+nvim
+pass show api/tokens/openai
+nvim
+exit
+bash
+exit
+bash
+exit
+clear
+nvim
+tmux
+exit
+clear
+clear
+go run
+go run comets.go
+go build
+./comets
+clear
+rm -rf comets

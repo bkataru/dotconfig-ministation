@@ -8,6 +8,40 @@ return {
     end,
   },
 
+  --[[
+  -- need to fix my OpenAI billing situation :(
+  -- till then i'll roll with Codeium
+  {
+    "jackMort/ChatGPT.nvim",
+    event = "VimEnter",
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "folke/trouble.nvim",
+      "nvim-telescope/telescope.nvim",
+    },
+    config = function ()
+      local function get_api_key()
+        local handle = io.popen("pass show api/tokens/openai | head -n 1 | tr -d '\n'")
+        local api_key = handle:read("*a")
+        handle:close()
+        return api_key:gsub("%s+", "") -- trim any extra whitespace
+      end 
+
+      local api_key = get_api_key()
+
+      require("chatgpt").setup({
+        api_key_cmd = "echo " .. api_key,
+      })
+    end,
+  },
+  --]]
+
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter' 
+  }, 
+
 
   -- python 
   
@@ -105,6 +139,7 @@ return {
     opts = function()
       local M = require("nvchad.configs.cmp")
       table.insert(M.sources, {name="crates"})
+      table.insert(M.sources, {name="codeium"})
       return M
     end,
   },
