@@ -27,6 +27,13 @@ map("n", "<leader>rcu", function ()
   require('crates').upgrade_all_crates()
 end)
 
+-- go 
+map("n", "<leader>gsj", "<cmd> GoTagAdd json <CR>", { desc= "Add json struct tags for go's reflection capabilities" })
+
+map("n", "<leader>gsy", "<cmd> GoTagAdd yaml <CR>", {
+  desc = "Add yaml struct tags for go's reflection capabilities"
+})
+
 
 
 

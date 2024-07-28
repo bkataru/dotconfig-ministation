@@ -6,6 +6,8 @@ local on_init = config.on_init
 local capabilities = config.capabilities
 
 local lspconfig = require "lspconfig"
+local util = require "lspconfig/util"
+
 local servers = { "html", "cssls" }
 
 -- lsps with default config
@@ -16,6 +18,25 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+-- go 
+lspconfig.gopls.setup {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  cmd = {"gopls"},
+  filetypes = {"go", "gomod", "gowork", "gotmpl"},
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      }
+    },
+  },
+}
 
 -- haskell 
 lspconfig.hls.setup {

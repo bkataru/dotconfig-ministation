@@ -25,10 +25,39 @@ return {
     end
   },
 
+
+  {
+
+    "linux-cultist/venv-selector.nvim",
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "mfussenegger/nvim-dap",
+      "mfussenegger/nvim-dap-python", --optional 
+
+    },
+    lazy = false,
+    branch = "regexp",
+    config = function ()
+      require("venv-selector").setup {
+        settings = {
+          search = {
+            my_venvs = {
+              command = "fd /bin/python$ ~ --full-path -IHL -E /proc",
+            },
+          },
+        },
+      }
+    end,
+    keys = {
+      {",v", "<cmd>VenvSelect<cr>"},
+    },
+  },
+
   -- js/ts/jsx/tsx
   {
     "windwp/nvim-ts-autotag",
     ft = {
+      "html",
       "javascript",
       "javascriptreact",
       "typescript",
@@ -77,6 +106,19 @@ return {
       local M = require("nvchad.configs.cmp")
       table.insert(M.sources, {name="crates"})
       return M
+    end,
+  },
+
+  -- go 
+  
+  {
+    "olexsmir/gopher.nvim",
+    ft = "go",
+    config = function (_, opts)
+      require("gopher").setup(opts)
+    end,
+    build = function ()
+      vim.cmd [[silent! GoInstallDeps]]
     end,
   },
 
@@ -136,7 +178,7 @@ return {
   {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
-    ft = {"python", "javascript", "typescript", "javascriptreact", "typescriptreact", "json"},
+    ft = {"html", "css", "json", "go", "python", "javascript", "typescript", "javascriptreact", "typescriptreact"},
     opts = function ()
       return require "configs.null-ls"
     end,
@@ -194,6 +236,10 @@ return {
       ensure_installed = {
         "rust-analyzer",
         "haskell-language-server",
+        "gopls",
+        "gofumpt",
+        "goimports-reviser",
+        "golines",
         "black",
         "debugpy",
         "mypy",
@@ -209,10 +255,40 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    dependencies = {
+      {"nvim-treesitter/nvim-treesitter-textobjects"},
+      {
+        "nvim-treesitter/nvim-treesitter-context",
+        opts = {enable = true, mode="topline", line_numbers = true}
+      }
+    },
     opts = function ()
-      local opts = require("configs.treesitter")
-      return opts
+      return require "configs.treesitter"
     end,
+    config = function (_, opts)
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = {"markdown"},
+        callback = function(ev)
+          require("treesitter-context").disable()
+        end
+      })
+
+      require("nvim-treesitter.configs").setup(opts)
+    end,
+  },
+
+  {
+    "kylechui/nvim-surround",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-treesitter/nvim-treesitter-textobjects"
+    },
+    event = "VeryLazy",
+    version = "*",
+    config = function ()
+      require("nvim-surround").setup()
+    end
   },
 
   {

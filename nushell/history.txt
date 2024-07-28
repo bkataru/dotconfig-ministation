@@ -1,0 +1,381 @@
+clear
+ls
+clear
+ls
+clear
+rustc hello_world.rs
+./hello_world
+clear
+rustc numbers.rs
+touch cast.py cast.rs
+clear
+python cast.py
+rustc cast.rs
+./cast
+rustc cast.rs
+ls
+rustc cast.rs
+./cast
+rustc -O cast.rs
+./cast
+rustup show
+rustup component add clippy
+ls
+cargo new --lib mylib
+ls
+cd mylib
+ls
+nvim
+ls
+cd ..
+cd mylib
+cargo run
+cargo build
+cargo run
+cargo run --bin release
+ls
+ls target/
+ls target/debug/
+ls
+ls target/debug/build
+ls target/debug/deps
+ls target/debug/
+cargo build --release
+ls
+cargo run
+ls target
+ls
+./target/release/
+ls
+./mylib
+cd ..
+ls
+rm -rf target
+clear
+ls
+cargo run
+vim Cargo.toml
+ls
+ls src/
+ls
+clear
+ls
+ls -a
+clear
+cd ..
+cargo new --lib geo
+cd geo
+ls
+cd src
+ls
+rm lib.rs
+touch lib.rs
+cat lib.rs
+clear
+cd ..
+clear
+ls
+cargo run
+clear
+cargo test
+cd ..
+ls
+cd rust
+ls
+cd rust-by-example
+clear
+nvim
+cd ..
+cd rust/rust-by-example
+clear
+ls
+cargo run
+nvim
+ls
+cd ..
+cd python
+ls
+cd pytorch-tutorial/
+clear
+vim src/main.rs
+cd ..
+cd python
+cd pytorch-tutorial/
+clear
+ls
+vim tensor_indexing.py
+nvim
+cd ..
+ls
+cd ..
+ls
+source activate_conda.sh
+eval
+cd ..
+ls
+bash
+exit
+clear
+ls
+clear
+ls
+cargo run
+clear
+cargo run
+clear
+cargo run
+clear
+cargo run
+clear
+cargo run
+clear
+cargo run
+conda
+conda env list
+conda activate deeplearning
+source activate_conda.sh
+clear
+ls
+clear
+mamba list
+clear
+ls
+jupyter notebook
+clear
+mamba list
+clear
+tmux
+mamba list
+clear
+ls
+tmux ls
+jupyter notebook
+ls
+cd python
+clear
+ls
+cd makemore/
+clear
+ls
+tmux attach-session -t 0
+tmux ls
+clear
+cd python/makemore/
+ls
+cd makemore
+clear
+ls
+cargo run
+nvim
+ls
+cd ..
+ls
+cd makemore
+clear
+ls
+clear
+cargo install cargo-shuttle
+ls
+mkdir url-shortener
+cd url-shortener
+clear
+ls
+cargo init --lib
+ls
+cd src
+cd ..
+cat src/lib.rs
+clear
+ls
+clear
+ls
+cargo add rocket -F json
+cargo add shuttle-service -F sqlx-postgres web-rocket
+cargo add shuttle-service --features sqlx-postgres web-rocket
+cargo add shuttle-service --F sqlx-postgres,web-rocket
+cargo add shuttle-service -F sqlx-postgres,web-rocket
+cargo -V
+cargo shuttle -V
+cd ..
+mkdir cch
+clear
+ls
+cd cch
+clear
+ls
+cargo shuttle init
+ls
+cd challengeminuszero/
+clear
+ls
+nvim
+cd ..
+ls
+cd cch
+ls
+nvim
+ls
+cargo shuttle run
+clear
+cd ..
+ls
+rm -rf challengeminuszero/
+clear
+ls
+cargo clean
+cargo --help
+cargo --list
+clear
+cd ..
+ls
+cd url-shortener/
+ls
+cd ..
+rm -rf url-shortener/
+ls
+cd ..
+clear
+ls
+cargo shuttle init
+cd lengthcontractor/
+clear
+cd lengthcontractor/
+clear
+ls
+cargo shuttle run
+clear
+ls
+cargo add sqlx
+cargo run
+ls
+cd ..
+ls
+nvim
+cd ..
+rm -rf lengthcontractor
+ls
+clear
+ls
+cargo new builders
+cd builders
+clear
+cd builders
+clear
+cargo run
+cat Cargo.toml
+cargo add chrono
+nvim
+cd ..
+cd ..
+clear
+mkdir rusty-crawler
+cd rusty-crawler/
+cd rusty-crawler
+clear
+git init
+ls
+echo "# rusty-crawler" >> README.md
+cat README.md
+ls
+clear
+ls
+cat README.md
+clear
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:bkataru/rusty-crawler.git
+git push -u origin main
+git remote set-url origin https://github.com/bkataru/rusty-crawler.git
+git remote show origin
+git push -u origin main
+clear
+cargo new crawler
+ls
+cd crawler/
+ls
+cd ..
+ls
+cd crawler
+clear
+ls
+cargo add tokio -F full
+nvim
+cargo add anyhow
+cargo build
+cargo run
+cargo add log env_logger
+cargo run
+cargo build
+clear
+cd target
+ls
+cd debug
+ls
+./crawler
+RUST_LOG=info ./crawler
+cd ..
+clear
+ls
+RUST_LOG=info cargo run
+cargo add reqwest
+RUST_LOG=info cargo run
+clear
+cargo add reqwest -F json
+clear
+cargo run
+RUST_LOG=info cargo run
+cargo run
+RUST_LOG=info cargo run
+cargo run
+RUST_LOG=info cargo run
+cargo add html_parser
+RUST_LOG=info cargo run
+clear
+cargo run
+RUST_LOG=info cargo run
+ls
+RUST_LOG=info cargo run
+RUST_LOG=info ./crawler
+clear
+RUST_LOG=info cargo run
+exit
+bash
+exit
+tmux
+exit
+df -T
+clear
+go install mvdan.cc/gofumpt@latest
+clear
+go mod list
+go list
+go --help
+go packages
+go help 
+go list
+go mod list
+go help mod
+go --help
+go list ...
+go install mvdan.cc/gofumpt@latest
+gofumpt
+clear
+go install github.com/incu6us/goimports-reviser/v3@latest
+clear
+go list -f "{{.ImportPath}} {{.Imports}}" ./...
+go list -f "{{.ImportPath}} {{.Imports}}" ...
+go list all
+go list '...'
+clear
+go list ...
+clear
+go help packages
+go all
+go list 
+go list std
+go list ...
+go list -e std
+go list -m all
+go doc -all
+find /root/go -name *.go

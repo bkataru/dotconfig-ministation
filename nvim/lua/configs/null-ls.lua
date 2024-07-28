@@ -3,13 +3,15 @@ local null_ls = require('null-ls')
 
 local opts = {
   sources = {
+    null_ls.builtins.formatting.gofumpt,
+    null_ls.builtins.formatting.goimports_reviser,
+    null_ls.builtins.formatting.golines,
     null_ls.builtins.formatting.black,
     null_ls.builtins.diagnostics.mypy,
     null_ls.builtins.diagnostics.pylint,
 
     -- ruff is not working in none-ls atm :(
-    -- null_ls.builtins.diagnostics.ruff,
-    
+    -- null_ls.builtins.diagnostics.ruff, 
     null_ls.builtins.formatting.prettierd,
 
     --[[
