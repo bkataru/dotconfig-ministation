@@ -15,16 +15,18 @@ local M = {
     "css",
     "markdown",
     "markdown_inline",
-    
+
     "rust",
-    
+
     "go",
     "gomod",
     "gosum",
     "gowork",
 
     "haskell",
+
     "python",
+
     "javascript",
     "typescript",
     "tsx",

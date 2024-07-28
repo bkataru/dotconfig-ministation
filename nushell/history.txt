@@ -419,3 +419,53 @@ go build
 ./comets
 clear
 rm -rf comets
+clear
+lua
+ls
+lua app.lua
+ls
+lua app.lua
+nvim
+mkdir game-development-love2d
+cd game-development-love2d/
+clear
+cd game-development-love2d/
+clear
+lua --version
+lua -v
+clear
+lua -v
+neofetch
+clear
+lua
+clear
+lua main.lua
+cd ..
+ls
+nvim
+cd ..
+clear
+ls
+mv app.lua main.lua
+clear
+ls
+rm game-development-love2d/main.lua
+clear
+ls
+clear
+lua -v
+clear
+lua
+clear
+lua
+clear
+lua
+clear
+lua main.lua
+nvim
+clear
+ls
+nvim
+lua main.lua
+clear
+lua main.lua

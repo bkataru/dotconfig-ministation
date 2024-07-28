@@ -8,7 +8,7 @@ local capabilities = config.capabilities
 local lspconfig = require "lspconfig"
 local util = require "lspconfig/util"
 
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls", "lua_ls" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
