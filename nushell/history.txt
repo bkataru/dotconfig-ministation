@@ -469,3 +469,6 @@ nvim
 lua main.lua
 clear
 lua main.lua
+clear
+lua main.lua
+nvim
