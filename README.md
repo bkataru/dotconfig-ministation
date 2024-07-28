@@ -1,6 +1,12 @@
 # dotconfig-ministation
 .config folder from my Fedora Workstation penboot installation, called `ministation`
 
+## features
+
+- has a heavily customized NeoVim installation with an NvChad base configuration containing support for a wide variety of languages via lsps, linters, formatters, debuggers, and treesitters, along with some general QoL plugins.
+- ideal workflow is to use tmux for terminal multiplexing, neovim for editing, and firefox for testing web-related tasks.
+
+
 ## notes
 
 ### configuring `neovim` to use `biome` for `js/ts/jsx/tsx/json` formatting
