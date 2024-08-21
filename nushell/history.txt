@@ -472,3 +472,484 @@ lua main.lua
 clear
 lua main.lua
 nvim
+exit
+exit
+exit
+bash
+exit
+clear
+ls
+lua main.lua
+clear
+lscpu
+clear
+lua main.lua
+clear
+lua main.lua
+nvim
+ls
+path_reader
+clear
+lua main.lua
+clear
+lua main.lua
+clear
+ls
+lua main.lua
+python
+clear
+python
+clear
+lua main.lua
+lfortran
+clear
+gfortran main.f90
+ls
+./a.out
+vim main.f90
+vim main.lua
+ls
+clear
+gfortran main.f90
+./a.out
+gfortran main.f90
+./a.out
+clear
+./a.out
+gfortram main.f90 && ./a.out
+gfortram main.f90 and ./a.out
+gfortran main.f90 and ./a.out
+gfortran main.f90 && ./a.out
+gfortran main.f90; ./a.out
+lfortran
+lfort
+clear
+gfortran main.f90; ./a.out
+clear
+clear
+ls
+clear
+ls
+gfortran main.f90; ./a.out
+ls
+cd ../dev/lua
+cd ../lua/
+clear
+ls
+cd ../lua
+clear
+ls
+nvim
+lua main.lua
+ckear
+clear
+ls
+rm main.f90 a.out
+clear
+nvim
+ls
+lua main.lua
+clear
+lua main.lua
+clear
+ls
+clear
+lscpu
+nvidia
+nvidia -smi
+clear
+uname 
+clear
+cd /
+ls
+cd mnt
+clear
+ls
+ls 
+cd .
+.ls
+clear
+cd /
+clear
+ls
+cd afs
+clear
+ls
+cd ..
+clear
+ls
+cd ~
+clear
+ls
+pwd
+clear
+neofetch
+clear
+curl google.com
+clear
+ping google.com
+clear
+df -Th
+clear
+du
+du -h
+clear
+ls
+tmux
+exit
+clear
+ls
+cd dev
+clear
+ls
+cd lua
+clear
+ls
+cd dev/lua
+clear
+ls
+nvim
+ls -a
+rm -rf .main.lua.swo
+rm -rf .main.lua.swp
+clear
+ls
+lua main.lua
+clear
+ls
+nua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+node
+clear
+lua main.lua
+clear
+ls
+clear
+nvim
+lua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+vim main.lua
+clear
+vim main.lua
+clear
+lua main.lua
+lua
+clear
+lua main.lua
+lua
+ckear
+clear
+lua main.lua
+clear
+lua main.lua
+luajit
+luajit main.lua
+luajit
+clear
+luajit
+clear
+lua
+luajit
+clear
+luajit main.lua
+clEAR
+clear
+lua main.lua
+lua
+clear
+lua main.lua
+vim main.lua
+clear
+exit
+clear
+pwd
+ls
+clear
+cd Desktop/dev
+clear
+ls
+cd aeyecam
+clear
+ls
+mv vaikuntha/ website
+clear
+ls
+cd website
+clear
+ls
+firefox index.html
+cd ..
+clear
+ls
+cd ..
+clear
+ls
+cd aeyecam
+clear
+ls
+cd ..
+clear
+cd lua
+clear
+ls
+cd Desktop
+clear
+ls
+cd dev
+clear
+ls
+cd lua
+clear
+ls
+lua main.lua
+clear
+lua main.lua
+nvim
+ls
+nvim
+lua main.lua
+clear
+lua main.lua
+vim main.lua
+clear
+exit
+clear
+clear
+ls
+cd Desktop
+cd dev
+clear
+ls
+cd lua
+clear
+cd Desktop/dev/lua
+clear
+ls
+nvim
+lua main.lua
+clear
+cd ..
+cd java
+clear
+vim main.lua
+cd ..
+clear
+ls
+cd java
+cleear
+clear
+ls
+mkdir bro-code
+clear
+ls
+cd bro-code
+clear
+cd bro-code
+clear
+ls
+mkdir MyFirstProgram
+cd MyFirstProgram/
+clear
+ls
+mkdir src
+clear
+ls
+cd src
+ls
+touch Main.java
+cd MyFirstProgram/src/
+clear
+ls
+clear
+clear
+ls
+java Main.java
+ls
+ls -a
+clear
+java Main.java
+clear
+java Main.java
+clear
+ls
+cd Desktop/dev/java
+ls
+cd bro-code
+clear
+ls
+cd MyFirstProgram/src/
+clear
+ls
+clear
+ls
+cd Desktop/dev/java/bro-code/MyFirstProgram/src
+clear
+ls
+java Main.java
+lua
+clear
+cd ..
+cd lua
+clear
+ls
+vim Main.java
+cd ~/Desktop/dev/lua
+clear
+ls
+lua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+lua --version
+lua -v
+lua
+clear
+lua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+clear
+lua main.lua
+cd ..
+ls\
+clear
+ls
+cd python
+ls
+cd ..
+ls
+source activate_conda.sh
+vim main.lua
+cd ..
+cd java/bro-code/MyFirstProgram/
+cd src
+clear
+ls
+clear
+ls
+javac Car.java
+ls
+java Car
+sudo alternatives --config java
+java --version
+clear
+java Car
+ls
+rm -rf Main.class Car.class
+clear
+ls
+clear
+ls
+conda
+clear
+ls
+bash
+exit
+ls
+cd ..
+clear
+ls
+cd python
+clear
+ls
+cd advanced-nlp-with-spacy/
+clear
+ls
+exit
+clear
+cd Desktop/dev/python
+clear
+ls
+cd pytorch-handwritten-digit-recognition/
+ls
+cd data
+ls
+cd ..
+ls
+cd pytorch-tutorial/
+clear
+ls
+cat pyrightconfig.json
+exit
+clear
+ls
+cd notes
+ls
+cat meds.md
+cat piplup.md
+clear
+ls
+cat todo.md
+clear
+ls
+vim confusion.md
+clear
+nvim
+cd ..
+clear
+ls
+cd advanced-nlp-with-spacy/
+clear
+ls
+clear
+ls
+python chapter1.py
+python -m spacy download de_core_web_sm
+python -m spacy download de_core_news_sm
+python chapter1.py
+python
+clear
+python chapter1.py
+clear
+ls
+python chapter1.py
+clewar
+clear
+python chapter1.py
+cd ..
+ls
+cd advanced-nlp-with-spacy/
+clear
+ls
+exit
+clear
+ls
+clear
+ls
+clear
+ls
+cd crawler
+clear
+ls
+RUST_LOG=info cargo run
+git branch
+clear
+ls
+python chapter1.py
+RUST_LOG=info cargo run
+nvim
+clear
+exit
+clear
+exit
+python chapter1.py
+clear
+python chapter1.py
+clear
+python chapter1.py

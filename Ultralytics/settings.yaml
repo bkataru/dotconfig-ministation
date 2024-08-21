@@ -1,0 +1,17 @@
+settings_version: 0.0.4
+datasets_dir: /home/bkataru/Desktop/dev/python/zaptrack/datasets
+weights_dir: weights
+runs_dir: runs
+uuid: 9e129127eaa8b01313e66de4b35e4b4b4a2ef5e51f70c8050bfe176224207b4a
+sync: true
+api_key: ''
+openai_api_key: ''
+clearml: true
+comet: true
+dvc: true
+hub: true
+mlflow: true
+neptune: true
+raytune: true
+tensorboard: true
+wandb: true
