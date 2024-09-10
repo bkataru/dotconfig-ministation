@@ -1,43 +1,44 @@
 local M = {
   ensure_installed = {
-    "vim",
-    "vimdoc",
+    'vim',
+    'vimdoc',
 
-    "lua",
+    'lua',
 
-    "dockerfile",
-    "gitignore",
+    'dockerfile',
+    'gitignore',
 
-    "json",
-    "yaml",
+    'json',
+    'yaml',
 
-    "html",
-    "css",
-    "markdown",
-    "markdown_inline",
+    'html',
+    'css',
+    'markdown',
+    'markdown_inline',
 
-    "rust",
+    'cpp',
+    'rust',
 
-    "go",
-    "gomod",
-    "gosum",
-    "gowork",
+    'go',
+    'gomod',
+    'gosum',
+    'gowork',
 
-    "haskell",
+    'haskell',
 
-    "python",
+    'python',
 
-    "javascript",
-    "typescript",
-    "tsx",
+    'javascript',
+    'typescript',
+    'tsx',
   },
-  indent = {enable=true},
+  indent = { enable = true },
   auto_install = true,
   sync_install = false,
   highlight = {
     enable = true,
   },
-  textobjects = {select = {enable = true, lookahead = true}}
+  textobjects = { select = { enable = true, lookahead = true } },
 }
 
 return M

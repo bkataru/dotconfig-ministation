@@ -1,14 +1,13 @@
-
-local config = require("nvchad.configs.lspconfig")
+local config = require 'nvchad.configs.lspconfig'
 
 local on_attach = config.on_attach
 local on_init = config.on_init
 local capabilities = config.capabilities
 
-local lspconfig = require "lspconfig"
-local util = require "lspconfig/util"
+local lspconfig = require 'lspconfig'
+local util = require 'lspconfig/util'
 
-local servers = { "html", "cssls", "lua_ls" }
+local servers = { 'html', 'cssls', 'lua_ls' }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -19,31 +18,41 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- go 
+-- c++
+lspconfig.clangd.setup {
+  on_attach = function(client, bufnr)
+    client.server_capabilities.signatureHelpProvider = false
+    on_attach(client, bufnr)
+  end,
+  on_init = on_init,
+  capabilities = capabilities,
+}
+
+-- go
 lspconfig.gopls.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
-  cmd = {"gopls"},
-  filetypes = {"go", "gomod", "gowork", "gotmpl"},
-  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  cmd = { 'gopls' },
+  filetypes = { 'go', 'gomod', 'gowork', 'gotmpl' },
+  root_dir = util.root_pattern('go.work', 'go.mod', '.git'),
   settings = {
     gopls = {
       completeUnimported = true,
       usePlaceholders = true,
       analyses = {
         unusedparams = true,
-      }
+      },
     },
   },
 }
 
--- haskell 
+-- haskell
 lspconfig.hls.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
-  filetypes = { 'haskell', 'lhaskell', 'cabal'},
+  filetypes = { 'haskell', 'lhaskell', 'cabal' },
 }
 
 -- python
@@ -51,7 +60,7 @@ lspconfig.pyright.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
-  filetypes = {"python"},
+  filetypes = { 'python' },
 }
 
 -- tailwindcss
@@ -64,15 +73,14 @@ lspconfig.tailwindcss.setup {
 -- javascript/typescript
 local function organize_imports()
   local params = {
-    command = "_typescript.organizeImports",
-    arguments = {vim.api.nvim_buf_get_name(0)},
+    command = '_typescript.organizeImports',
+    arguments = { vim.api.nvim_buf_get_name(0) },
   }
   vim.lsp.buf.execute_command(params)
 end
 
-
 lspconfig.tsserver.setup {
-  on_attach = function (client)
+  on_attach = function(client)
     client.server_capabilities.documentFormattingProvider = false
     on_attach(client)
   end,
@@ -81,14 +89,14 @@ lspconfig.tsserver.setup {
   init_options = {
     preferences = {
       disableSuggestions = false,
-    }
+    },
   },
   commands = {
     OrganizeImports = {
       organize_imports,
-      description = "Organize Imports",
-    }
-  }
+      description = 'Organize Imports',
+    },
+  },
 }
 
 lspconfig.eslint.setup {

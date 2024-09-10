@@ -953,3 +953,43 @@ clear
 python chapter1.py
 clear
 python chapter1.py
+clear
+la
+clear
+ls
+clear
+bash
+exit
+clear
+ls
+clear
+g++ o- hello hello.cpp
+g++ -o hello hello.cpp
+ls
+clear
+ls
+rm hello
+clear
+ls
+g++ hello.cpp -o hello
+ls
+./hello
+./hello there
+./hello baala
+./hello baala there
+./hello
+clear
+ls
+rm hello
+clear
+cmake --version
+clear
+pkg-config
+pkg-config opencv
+pkg-config --cflags --libs opencv
+pkg-config --libs opencv
+gcc --version
+clear
+lspci | grep -E "VGA|3D"
+echo $XDG_SESSION_TYPE
+exit
