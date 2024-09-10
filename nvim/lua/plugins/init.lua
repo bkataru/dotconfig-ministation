@@ -153,9 +153,32 @@ return {
     opts = function()
       local M = require 'nvchad.configs.cmp'
       table.insert(M.sources, { name = 'crates' })
-      table.insert(M.sources, { name = 'codeium' })
+      -- table.insert(M.sources, { name = 'codeium' })
       return M
     end,
+    --[[
+    config = function(_, opts)
+      local cmp = require 'cmp'
+      local neocodeium = require 'neocodeium'
+      local commands = require 'neocodeium.commands'
+
+      cmp.event:on('menu_opened', function()
+        neocodeium.clear()
+      end)
+
+      neocodeium.setup {
+        enabled = function()
+          return cmp.visible()
+        end,
+      }
+
+      cmp.setup {
+        completion = {
+          autocomplete = false,
+        },
+      }
+    end,
+    --]]
   },
 
   -- go
@@ -368,6 +391,13 @@ return {
       require('nvchad.configs.lspconfig').defaults()
       require 'configs.lspconfig'
     end,
+    opts = {
+      setup = {
+        clangd = function(_, opts)
+          opts.capabilities.offsetEncoding = { 'utf-16' }
+        end,
+      },
+    },
   },
 
   -- These are some examples, uncomment them if you want to see them work!

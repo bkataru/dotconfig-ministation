@@ -21,11 +21,16 @@ end
 -- c++
 lspconfig.clangd.setup {
   on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
+    -- client.server_capabilities.signatureHelpProvider = false
+
     on_attach(client, bufnr)
   end,
   on_init = on_init,
   capabilities = capabilities,
+  cmd = {
+    'clangd',
+    '--offset-encoding=utf-16',
+  },
 }
 
 -- go
